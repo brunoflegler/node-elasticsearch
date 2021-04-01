@@ -1,0 +1,20 @@
+cluster.name: "docker-cluster"
+network.host: 0.0.0.0
+
+# minimum_master_nodes need to be explicitly set when bound on a public IP
+# set to 1 to allow single node clusters
+# Details: https://github.com/elastic/elasticsearch/pull/17288
+discovery.zen.minimum_master_nodes: 1
+# script.engine.groovy.inline.search: true
+script.engine.groovy.inline.aggs: true
+# script.engine.groovy.inline.ingest : true
+# script.engine.groovy.inline.update: true
+# script.engine.groovy.inline: true
+# script.engine.groovy.stored: true
+# script.engine.groovy.file.ingest : true 
+# script.engine.groovy.file.aggs: true
+# script.engine.groovy.file.search : true
+# script.engine.groovy.inline.xpack_watch : true
+# script.inline: true
+# script.allowed_types: inline
+path.repo: ["/usr/share/elasticsearch/snapshot"]
